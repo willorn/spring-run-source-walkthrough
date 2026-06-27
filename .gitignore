@@ -54,6 +54,46 @@ replay_pid*
 ### VS Code ###
 .vscode/
 
+### Research snapshots ###
+research/spring-boot-2.3.12/**
+research/spring-framework-5.2.15/**
+!research/spring-boot-2.3.12/
+!research/spring-boot-2.3.12/LICENSE.txt
+!research/spring-boot-2.3.12/spring-boot-project/
+!research/spring-boot-2.3.12/spring-boot-project/spring-boot/
+!research/spring-boot-2.3.12/spring-boot-project/spring-boot/src/
+!research/spring-boot-2.3.12/spring-boot-project/spring-boot/src/main/
+!research/spring-boot-2.3.12/spring-boot-project/spring-boot/src/main/java/
+!research/spring-boot-2.3.12/spring-boot-project/spring-boot/src/main/java/org/
+!research/spring-boot-2.3.12/spring-boot-project/spring-boot/src/main/java/org/springframework/
+!research/spring-boot-2.3.12/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/
+!research/spring-boot-2.3.12/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/SpringApplication.java
+!research/spring-boot-2.3.12/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/WebApplicationType.java
+!research/spring-framework-5.2.15/
+!research/spring-framework-5.2.15/LICENSE.txt
+!research/spring-framework-5.2.15/spring-context/
+!research/spring-framework-5.2.15/spring-context/src/
+!research/spring-framework-5.2.15/spring-context/src/main/
+!research/spring-framework-5.2.15/spring-context/src/main/java/
+!research/spring-framework-5.2.15/spring-context/src/main/java/org/
+!research/spring-framework-5.2.15/spring-context/src/main/java/org/springframework/
+!research/spring-framework-5.2.15/spring-context/src/main/java/org/springframework/context/
+!research/spring-framework-5.2.15/spring-context/src/main/java/org/springframework/context/support/
+!research/spring-framework-5.2.15/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java
+!research/spring-framework-5.2.15/spring-beans/
+!research/spring-framework-5.2.15/spring-beans/src/
+!research/spring-framework-5.2.15/spring-beans/src/main/
+!research/spring-framework-5.2.15/spring-beans/src/main/java/
+!research/spring-framework-5.2.15/spring-beans/src/main/java/org/
+!research/spring-framework-5.2.15/spring-beans/src/main/java/org/springframework/
+!research/spring-framework-5.2.15/spring-beans/src/main/java/org/springframework/beans/
+!research/spring-framework-5.2.15/spring-beans/src/main/java/org/springframework/beans/factory/
+!research/spring-framework-5.2.15/spring-beans/src/main/java/org/springframework/beans/factory/config/
+!research/spring-framework-5.2.15/spring-beans/src/main/java/org/springframework/beans/factory/config/BeanDefinition.java
+!research/spring-framework-5.2.15/spring-beans/src/main/java/org/springframework/beans/factory/config/BeanPostProcessor.java
+!research/spring-framework-5.2.15/spring-beans/src/main/java/org/springframework/beans/factory/support/
+!research/spring-framework-5.2.15/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java
+
 ### OS / editor ###
 .DS_Store
 Thumbs.db
