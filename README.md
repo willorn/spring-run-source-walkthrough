@@ -30,7 +30,7 @@ SpringApplication.run(BlueOceanApplication.class, args);
 
 ### 1. 先看项目入口
 
-- [BlueOceanApplication.java](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/src/main/java/com/blue/ocean/BlueOceanApplication.java)
+- [BlueOceanApplication.java](src/main/java/com/blue/ocean/BlueOceanApplication.java)
 
 只盯住这一句：
 
@@ -40,7 +40,7 @@ SpringApplication.run(BlueOceanApplication.class, args);
 
 ### 2. 再看 Spring Boot 如何组织启动
 
-- [SpringApplication.java](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/research/spring-boot-2.3.12/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/SpringApplication.java)
+- [SpringApplication.java](research/spring-boot-2.3.12/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/SpringApplication.java)
 
 重点方法：
 
@@ -52,7 +52,7 @@ SpringApplication.run(BlueOceanApplication.class, args);
 
 ### 3. 看应用类型如何被推断
 
-- [WebApplicationType.java](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/research/spring-boot-2.3.12/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/WebApplicationType.java)
+- [WebApplicationType.java](research/spring-boot-2.3.12/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/WebApplicationType.java)
 
 重点看：
 
@@ -60,7 +60,7 @@ SpringApplication.run(BlueOceanApplication.class, args);
 
 ### 4. 看 Spring 容器真正启动的主干
 
-- [AbstractApplicationContext.java](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/research/spring-framework-5.2.15/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java)
+- [AbstractApplicationContext.java](research/spring-framework-5.2.15/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java)
 
 重点看：
 
@@ -68,9 +68,9 @@ SpringApplication.run(BlueOceanApplication.class, args);
 
 ### 5. 再补 BeanDefinition 和 BeanPostProcessor 这层基础
 
-- [DefaultListableBeanFactory.java](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/research/spring-framework-5.2.15/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java)
-- [BeanDefinition.java](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/research/spring-framework-5.2.15/spring-beans/src/main/java/org/springframework/beans/factory/config/BeanDefinition.java)
-- [BeanPostProcessor.java](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/research/spring-framework-5.2.15/spring-beans/src/main/java/org/springframework/beans/factory/config/BeanPostProcessor.java)
+- [DefaultListableBeanFactory.java](research/spring-framework-5.2.15/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java)
+- [BeanDefinition.java](research/spring-framework-5.2.15/spring-beans/src/main/java/org/springframework/beans/factory/config/BeanDefinition.java)
+- [BeanPostProcessor.java](research/spring-framework-5.2.15/spring-beans/src/main/java/org/springframework/beans/factory/config/BeanPostProcessor.java)
 
 ## 当前 demo 里的扩展点
 
@@ -78,10 +78,10 @@ SpringApplication.run(BlueOceanApplication.class, args);
 
 ### Spring 启动扩展点
 
-- [MyInitializer.java](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/src/main/java/com/blue/ocean/MyInitializer.java)
-- [MyListener.java](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/src/main/java/com/blue/ocean/listener/MyListener.java)
-- [MyListener1.java](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/src/main/java/com/blue/ocean/listener/MyListener1.java)
-- [spring.factories](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/src/main/resources/META-INF/spring.factories)
+- [MyInitializer.java](src/main/java/com/blue/ocean/MyInitializer.java)
+- [MyListener.java](src/main/java/com/blue/ocean/listener/MyListener.java)
+- [MyListener1.java](src/main/java/com/blue/ocean/listener/MyListener1.java)
+- [spring.factories](src/main/resources/META-INF/spring.factories)
 
 它们对应的启动位置大致是：
 
@@ -91,11 +91,11 @@ SpringApplication.run(BlueOceanApplication.class, args);
 
 ### Java SPI 示例
 
-- [MyService.java](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/src/main/java/com/blue/ocean/spi/MyService.java)
-- [MyServiceImpl1.java](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/src/main/java/com/blue/ocean/spi/MyServiceImpl1.java)
-- [MyServiceImpl2.java](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/src/main/java/com/blue/ocean/spi/MyServiceImpl2.java)
-- [SpiDemo.java](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/src/main/java/com/blue/ocean/spi/SpiDemo.java)
-- [META-INF/services/com.blue.ocean.spi.MyService](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/src/main/resources/META-INF/services/com.blue.ocean.spi.MyService)
+- [MyService.java](src/main/java/com/blue/ocean/spi/MyService.java)
+- [MyServiceImpl1.java](src/main/java/com/blue/ocean/spi/MyServiceImpl1.java)
+- [MyServiceImpl2.java](src/main/java/com/blue/ocean/spi/MyServiceImpl2.java)
+- [SpiDemo.java](src/main/java/com/blue/ocean/spi/SpiDemo.java)
+- [META-INF/services/com.blue.ocean.spi.MyService](src/main/resources/META-INF/services/com.blue.ocean.spi.MyService)
 
 这部分适合拿来对比：
 
@@ -131,9 +131,9 @@ java -jar target/spring-demo-blue-ocean-1.0-SNAPSHOT.jar
 
 ## 推荐搭配阅读
 
-- [docs/spring-startup-reading-path.md](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/docs/spring-startup-reading-path.md)
-- [docs/spring-startup-and-spi-guide.md](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/docs/spring-startup-and-spi-guide.md)
-- [research/README.md](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/research/README.md)
+- [docs/spring-startup-reading-path.md](docs/spring-startup-reading-path.md)
+- [docs/spring-startup-and-spi-guide.md](docs/spring-startup-and-spi-guide.md)
+- [research/README.md](research/README.md)
 
 ## 说明
 

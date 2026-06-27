@@ -21,7 +21,7 @@
 
 ### 1. 先看 demo 入口
 
-- `/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/src/main/java/com/blue/ocean/BlueOceanApplication.java`
+- `../src/main/java/com/blue/ocean/BlueOceanApplication.java`
 
 重点入口：
 
@@ -31,7 +31,7 @@ SpringApplication.run(BlueOceanApplication.class, args);
 
 ### 2. 看 Spring Boot 如何组织启动
 
-- `/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/research/spring-boot-2.3.12/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/SpringApplication.java`
+- `spring-boot-2.3.12/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/SpringApplication.java`
 
 重点看：
 
@@ -43,7 +43,7 @@ SpringApplication.run(BlueOceanApplication.class, args);
 
 ### 3. 看应用类型如何被推断
 
-- `/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/research/spring-boot-2.3.12/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/WebApplicationType.java`
+- `spring-boot-2.3.12/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/WebApplicationType.java`
 
 重点看：
 
@@ -51,7 +51,7 @@ SpringApplication.run(BlueOceanApplication.class, args);
 
 ### 4. 看 Spring 容器真正启动的主干
 
-- `/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/research/spring-framework-5.2.15/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java`
+- `spring-framework-5.2.15/spring-context/src/main/java/org/springframework/context/support/AbstractApplicationContext.java`
 
 重点看：
 
@@ -59,7 +59,7 @@ SpringApplication.run(BlueOceanApplication.class, args);
 
 ### 5. 看 BeanDefinition 存放和注册位置
 
-- `/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/research/spring-framework-5.2.15/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java`
+- `spring-framework-5.2.15/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java`
 
 重点看：
 
@@ -69,8 +69,8 @@ SpringApplication.run(BlueOceanApplication.class, args);
 
 ### 6. 看 BeanDefinition 和 BeanPostProcessor 的职责
 
-- `/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/research/spring-framework-5.2.15/spring-beans/src/main/java/org/springframework/beans/factory/config/BeanDefinition.java`
-- `/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/research/spring-framework-5.2.15/spring-beans/src/main/java/org/springframework/beans/factory/config/BeanPostProcessor.java`
+- `spring-framework-5.2.15/spring-beans/src/main/java/org/springframework/beans/factory/config/BeanDefinition.java`
+- `spring-framework-5.2.15/spring-beans/src/main/java/org/springframework/beans/factory/config/BeanPostProcessor.java`
 
 ## 和当前 demo 的对应关系
 

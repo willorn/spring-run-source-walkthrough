@@ -17,11 +17,7 @@
 
 所以你后面看源码时，尽量按这个版本找。
 
-源码包位置：
-
-- Boot: `/Users/tianyi/.m2/repository/org/springframework/boot/spring-boot/2.3.12.RELEASE/spring-boot-2.3.12.RELEASE-sources.jar`
-- Context: `/Users/tianyi/.m2/repository/org/springframework/spring-context/5.2.15.RELEASE/spring-context-5.2.15.RELEASE-sources.jar`
-- Beans: `/Users/tianyi/.m2/repository/org/springframework/spring-beans/5.2.15.RELEASE/spring-beans-5.2.15.RELEASE-sources.jar`
+源码可以从 IDE 下载的 Maven Sources 查看，或者直接结合仓库里的 `research/` 目录阅读。
 
 ---
 
@@ -31,7 +27,7 @@
 
 先看：
 
-- [BlueOceanApplication.java](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/src/main/java/com/blue/ocean/BlueOceanApplication.java)
+- [BlueOceanApplication.java](../src/main/java/com/blue/ocean/BlueOceanApplication.java)
 
 你只需要盯住这一句：
 
@@ -200,12 +196,12 @@ finishRefresh();
 
 现在再回来看项目中的两个扩展点：
 
-- [MyInitializer.java](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/src/main/java/com/blue/ocean/MyInitializer.java)
-- [MyListener.java](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/src/main/java/com/blue/ocean/listener/MyListener.java)
+- [MyInitializer.java](../src/main/java/com/blue/ocean/MyInitializer.java)
+- [MyListener.java](../src/main/java/com/blue/ocean/listener/MyListener.java)
 
 以及它们的注册文件：
 
-- [spring.factories](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/src/main/resources/META-INF/spring.factories)
+- [spring.factories](../src/main/resources/META-INF/spring.factories)
 
 你只要把它们挂到两个位置上：
 
@@ -333,14 +329,14 @@ postProcessAfterInitialization(...)
 
 如果你现在准备重新读一遍，我建议就按这个顺序：
 
-1. [BlueOceanApplication.java](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/src/main/java/com/blue/ocean/BlueOceanApplication.java)
+1. [BlueOceanApplication.java](../src/main/java/com/blue/ocean/BlueOceanApplication.java)
 2. `SpringApplication` 构造器
 3. `WebApplicationType.deduceFromClasspath()`
 4. `SpringApplication.run()`
 5. `AbstractApplicationContext.refresh()`
-6. [spring.factories](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/src/main/resources/META-INF/spring.factories)
-7. [MyInitializer.java](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/src/main/java/com/blue/ocean/MyInitializer.java)
-8. [MyListener.java](/Users/tianyi/Resource/Kuake/spring-demo-blue-ocean/src/main/java/com/blue/ocean/listener/MyListener.java)
+6. [spring.factories](../src/main/resources/META-INF/spring.factories)
+7. [MyInitializer.java](../src/main/java/com/blue/ocean/MyInitializer.java)
+8. [MyListener.java](../src/main/java/com/blue/ocean/listener/MyListener.java)
 9. `BeanDefinition`
 10. `DefaultListableBeanFactory`
 11. `BeanPostProcessor`

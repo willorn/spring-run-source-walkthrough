@@ -11,14 +11,7 @@
 - Spring Framework: `5.2.15.RELEASE`
 - 启动入口: `src/main/java/com/blue/ocean/BlueOceanApplication.java`
 
-如果你准备结合源码讲解，建议优先看本机 Maven 仓库里的 source jar：
-
-- Spring Boot 源码：
-  `/Users/tianyi/.m2/repository/org/springframework/boot/spring-boot/2.3.12.RELEASE/spring-boot-2.3.12.RELEASE-sources.jar`
-- spring-context 源码：
-  `/Users/tianyi/.m2/repository/org/springframework/spring-context/5.2.15.RELEASE/spring-context-5.2.15.RELEASE-sources.jar`
-- spring-beans 源码：
-  `/Users/tianyi/.m2/repository/org/springframework/spring-beans/5.2.15.RELEASE/spring-beans-5.2.15.RELEASE-sources.jar`
+如果你准备结合源码讲解，建议优先看 IDE 下载的 Maven Sources，或者直接看仓库里的 `research/` 源码切片。
 
 为什么这里要特别强调版本？
 
