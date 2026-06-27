@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!--
+        Maven 项目的根标签。
+        这个文件用于定义：
+        1. 项目的坐标信息
+        2. 继承的父工程
+        3. 编译参数
+        4. 依赖库
+    -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--
+        groupId + artifactId + version 一起构成当前项目的唯一坐标。
+        类似于 Java 包名 + 项目名 + 版本号。
+    -->
+    <groupId>org.example</groupId>
+    <artifactId>spring-demo-blue-ocean</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!--
+        properties 用于统一管理可复用配置。
+        这里主要配置 Java 编译版本和源码编码。
+    -->
+    <properties>
+        <!-- 指定源码按 JDK 8 语法编译 -->
+        <maven.compiler.source>8</maven.compiler.source>
+        <!-- 指定编译后的 class 目标版本也是 JDK 8 -->
+        <maven.compiler.target>8</maven.compiler.target>
+        <!-- 指定项目源码文件编码，避免中文乱码 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!--
+        parent 表示当前项目继承 Spring Boot 官方父工程。
+        继承后可以直接获得：
+        1. 一组经过 Spring Boot 验证的依赖版本管理
+        2. 常用 Maven 插件的默认配置
+        3. 更简洁的依赖声明方式
+    -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.12.RELEASE</version>
+    </parent>
+
+
+    <!--
+        dependencies 中声明项目运行或编译所需的第三方依赖。
+        Spring Boot 推荐通过 starter 方式引入一整套相关能力。
+    -->
+    <dependencies>
+        <!--
+            Spring Boot 基础启动器。
+            提供自动配置、日志、Spring Core 等基础能力。
+            即使不写 web，很多 Spring Boot 项目也会先引入它。
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--
+            Web 启动器。
+            主要用于开发 Spring MVC / RESTful API。
+            它通常会带入：
+            1. spring-webmvc
+            2. 内嵌 Tomcat
+            3. JSON 处理相关依赖
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!--
+            Redis 启动器。
+            用于整合 Spring Data Redis，方便操作 Redis。
+            由于项目已经继承了 spring-boot-starter-parent，
+            实际上通常可以不单独写 version，父工程会统一管理版本。
+            这里显式写 2.3.12.RELEASE 也能工作，但属于重复声明。
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+<!--            <version>2.3.12.RELEASE</version>-->
+        </dependency>
+
+        <!--
+            commons-pool2 是对象池依赖。
+            当 Redis 客户端使用 Lettuce 并开启连接池配置时，通常需要它。
+            它不是 Redis 功能本身，而是连接池的底层支持库。
+        -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+        </dependency>
+
+    </dependencies>
+</project>

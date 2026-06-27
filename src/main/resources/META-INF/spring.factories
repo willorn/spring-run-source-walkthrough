@@ -1,0 +1,18 @@
+# 这是 Spring Framework / Spring Boot 常见的一种 SPI 风格扩展配置。
+# 与标准 Java SPI 的区别是：
+# 1. 标准 SPI 通常使用 META-INF/services/接口全限定名
+# 2. Spring 常通过 META-INF/spring.factories 维护 “接口 -> 实现类列表” 的映射
+#
+# 启动阶段的关键动作：
+# SpringApplication 构造器会调用 getSpringFactoriesInstances(...)
+# -> SpringFactoriesLoader.loadFactoryNames(...)
+# -> 扫描 classpath 下所有 META-INF/spring.factories
+# -> 按 key 找到对应实现类，再反射创建对象
+
+org.springframework.context.ApplicationListener=\
+com.blue.ocean.listener.MyListener,\
+com.blue.ocean.listener.MyListener1
+
+
+org.springframework.context.ApplicationContextInitializer=\
+com.blue.ocean.MyInitializer

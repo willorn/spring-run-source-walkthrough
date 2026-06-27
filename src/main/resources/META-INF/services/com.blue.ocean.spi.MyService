@@ -1,0 +1,8 @@
+# 标准 Java SPI 配置文件。
+# 文件名必须是“接口的全限定名”。
+# 文件内容是实现类的全限定名，一行一个。
+#
+# JDK 的 ServiceLoader.load(MyService.class) 会读取这个文件，
+# 再把下面这些实现类加载并实例化出来。
+com.blue.ocean.spi.MyServiceImpl1
+com.blue.ocean.spi.MyServiceImpl2
